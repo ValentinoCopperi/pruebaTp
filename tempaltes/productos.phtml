@@ -1,0 +1,32 @@
+<?php require 'tempaltes/header.phtml' ?>
+
+<div class="contenedorProductos">
+    <h1>Productos</h1>
+    <h2>Categorias:</h2>
+
+    <ul class="categorias">
+        <li><a href="monitores">MONITORES</a></li>
+        <li><a href="procesadores">PROCESADORES</a></li>
+        <li><a href="perifericos">PERIFERICOS</a></li>
+        <li><a href="productos">VER TODOS</a></li>
+    </ul>
+    <div class="showProduc">
+        <?php foreach ($productos as $produc) : ?>
+
+            <div class="produc">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title"><?= $produc->nombre ?></h5>
+                        <p class="card-text"><?= $produc->categoria ?></p>
+                        <a href="#" class="btn btn-primary"><?= $produc->precio ?></a>
+                        <a href="#" class="btn btn-secondary">Comprar</a>
+                    </div>
+                </div>
+            </div>
+
+        <?php endforeach ?>
+    </div>
+</div>
+
+<?php require 'tempaltes/footer.phtml' ?>

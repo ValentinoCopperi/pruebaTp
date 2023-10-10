@@ -1,0 +1,22 @@
+<?php require 'tempaltes/header.phtml' ?>
+
+
+<form action="newLogin" method="POST">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input name="contraseña" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <?php if ($mensaje) : ?>
+    <div class='alert alert-danger' role='alert'>
+      <?= $mensaje ?>
+    </div>
+  <?php endif ?>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<?php require 'tempaltes/footer.phtml' ?>
